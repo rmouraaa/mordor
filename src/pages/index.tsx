@@ -3,6 +3,7 @@ import React from 'react'
 import Head from 'next/head'
 import { Header } from '../components/Header'
 import { Introduction } from '../components/page/Introduction'
+import { Branding } from '../components/page/Branding'
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
 
       <main>
         <Introduction />
+
+        <Branding />
       </main>
     </>
   )

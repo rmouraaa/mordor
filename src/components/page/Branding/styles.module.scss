@@ -1,0 +1,59 @@
+.branding {
+  margin-top: 8.75rem;
+  .container {
+    width: 60%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      margin-top: 4.8rem;
+
+      font-size: 1.125rem;
+    }
+
+    .separator {
+      margin: 2rem 0 4rem 0;
+    }
+
+    .cards {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      div {
+        position: relative;
+        top: 0;
+
+        transition: all 0.3s;
+
+        &:hover {
+          top: -60px;
+        }
+      }
+
+      div:nth-child(1) {
+        right: -80px;
+      }
+
+      div:nth-child(2) {
+        top: -60px;
+        z-index: 1;
+
+        &:hover {
+          top: -80px;
+        }
+      }
+
+      div:nth-child(3) {
+        right: 80px;
+      }
+    }
+
+    a {
+      margin-top: 1.8rem;
+    }
+  }
+}

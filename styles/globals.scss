@@ -100,6 +100,18 @@ h6 {
   font-family: Bold;
 }
 
+h2 {
+  font-size: 2.5rem;
+
+  text-align: center;
+
+  font-family: Light;
+
+  span {
+    font-family: Bold;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
