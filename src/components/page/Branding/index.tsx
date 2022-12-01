@@ -7,6 +7,7 @@ import CardOne from '../../../../public/icons/cardBranding.svg'
 import CardTwo from '../../../../public/icons/cardAnimation.svg'
 import CardThree from '../../../../public/icons/cardInnovation.svg'
 import { ButtonBackground } from '../../ButtonBackground'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 export const Branding = () => {
   return (
@@ -28,17 +29,17 @@ export const Branding = () => {
         />
 
         <div className={styles.cards}>
-          <div>
+          <AnimationOnScroll animateIn="animate__backInLeft">
             <Image src={CardOne} alt="Ícone de uma carta" />
-          </div>
+          </AnimationOnScroll>
 
-          <div>
+          <AnimationOnScroll animateIn="animate__backInDown">
             <Image src={CardTwo} alt="Ícone de uma carta" />
-          </div>
+          </AnimationOnScroll>
 
-          <div>
+          <AnimationOnScroll animateIn="animate__backInRight">
             <Image src={CardThree} alt="Ícone de uma carta" />
-          </div>
+          </AnimationOnScroll>
         </div>
 
         <ButtonBackground buttonText={'Contact now'} />

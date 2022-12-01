@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './styles.module.scss'
 
 import Decoration from '../../../public/icons/linkDecoration.svg'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 interface BestWorkProps {
   title: string
@@ -19,9 +20,14 @@ export const BestWorkComponent = ({
   if (variant === 'left') {
     return (
       <div className={styles.container}>
-        <Image src={image} alt={title} />
+        <AnimationOnScroll animateIn="animate__fadeInLeft">
+          <Image src={image} alt={title} />
+        </AnimationOnScroll>
 
-        <div className={styles.contentLeft}>
+        <AnimationOnScroll
+          animateIn="animate__fadeInRight"
+          className={styles.contentLeft}
+        >
           <h3>{title}</h3>
           <p>Brisas Pampulha</p>
 
@@ -30,14 +36,17 @@ export const BestWorkComponent = ({
 
             <Image src={Decoration} alt="Decoração" />
           </div>
-        </div>
+        </AnimationOnScroll>
       </div>
     )
   }
 
   return (
     <div className={styles.container}>
-      <div className={styles.content}>
+      <AnimationOnScroll
+        animateIn="animate__fadeInLeft"
+        className={styles.content}
+      >
         <h3>{title}</h3>
         <p>Brisas Pampulha</p>
 
@@ -46,9 +55,11 @@ export const BestWorkComponent = ({
 
           <Image src={Decoration} alt="Decoração" />
         </div>
-      </div>
+      </AnimationOnScroll>
 
-      <Image src={image} alt={title} />
+      <AnimationOnScroll animateIn="animate__fadeInRight">
+        <Image src={image} alt={title} />
+      </AnimationOnScroll>
     </div>
   )
 }
