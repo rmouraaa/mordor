@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url('../../../public/icons/backgroundButton.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  width: 240px;
+  height: 57px;
+
+  color: var(--yellow-50);
+  text-align: center;
+  font-family: Regular;
+  font-size: 1rem;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}

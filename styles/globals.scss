@@ -1,13 +1,18 @@
 :root {
   --white-50: #fff;
   --white-100: #e1e1e1;
-  --white-200: #f8ece0;
-  --white-300: #e8d8c9;
-  --white-400: #d9c7b9;
+  --white-200: #e3e3e3;
 
-  --brown-50: #c3a775;
-  --brown-100: #e0a24b;
-  --brown-200: #d2953c;
+  --brown-50: #bfa871;
+  --brown-100: #c3a775;
+  --brown-200: #a28357;
+
+  --yellow-50: #f2b250;
+  --yellow-100: #c08117;
+
+  --black-50: #000000;
+
+  --gray-50: #676767;
 }
 
 * {
@@ -62,7 +67,11 @@
 }
 
 body {
-  background: #f8f3ee;
+  background-image: url('../public/icons/background.svg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   color: var(--black);
   -webkit-font-smoothing: antialiased;
   font-family: Regular;

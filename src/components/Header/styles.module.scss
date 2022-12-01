@@ -1,0 +1,30 @@
+.header {
+  padding-top: 3rem;
+
+  border-top: 20px solid var(--brown-50);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    nav {
+      margin-right: 8rem;
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+
+        li a {
+          font-size: 1.125rem;
+          font-family: Regular;
+
+          &:hover {
+            color: var(--yellow-100);
+          }
+        }
+      }
+    }
+  }
+}

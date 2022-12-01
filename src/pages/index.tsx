@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Head from 'next/head'
+import { Header } from '../components/Header'
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
         <title>Mordor | Branding and brand experience studio</title>
       </Head>
 
-      <h1>teste</h1>
+      <Header />
     </>
   )
 }
