@@ -10,7 +10,8 @@
   --yellow-50: #f2b250;
   --yellow-100: #c08117;
 
-  --black-50: #000000;
+  --black-50: #252525;
+  --black-100: #000000;
 
   --gray-50: #676767;
 }
@@ -72,7 +73,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
-  color: var(--black);
+  color: var(--black-100);
   -webkit-font-smoothing: antialiased;
   font-family: Regular;
 }

@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { Header } from '../components/Header'
 import { Introduction } from '../components/page/Introduction'
 import { Branding } from '../components/page/Branding'
+import { BestWork } from '../components/page/BestWork'
 
 export default function Home() {
   return (
@@ -18,6 +19,8 @@ export default function Home() {
         <Introduction />
 
         <Branding />
+
+        <BestWork />
       </main>
     </>
   )
