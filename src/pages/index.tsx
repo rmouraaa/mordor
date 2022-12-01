@@ -5,6 +5,7 @@ import { Header } from '../components/Header'
 import { Introduction } from '../components/page/Introduction'
 import { Branding } from '../components/page/Branding'
 import { BestWork } from '../components/page/BestWork'
+import { Footer } from '../components/Footer'
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
 
         <BestWork />
       </main>
+
+      <Footer />
     </>
   )
 }
