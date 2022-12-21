@@ -1,49 +1,128 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './styles.module.scss'
 
 import Separator from '../../../../public/icons/separator.svg'
-import CardOne from '../../../../public/icons/cardBranding.svg'
-import CardTwo from '../../../../public/icons/cardAnimation.svg'
-import CardThree from '../../../../public/icons/cardInnovation.svg'
+
 import { ButtonBackground } from '../../ButtonBackground'
-import { AnimationOnScroll } from 'react-animation-on-scroll'
+
+// cards
+import BrandingCardFront from '../../../../public/icons/cards/CardBrandingFront.svg'
+import BrandingCardBack from '../../../../public/icons/cards/CardBrandingBack.svg'
+
+import AnimationCardFront from '../../../../public/icons/cards/CardAnimationFront.svg'
+import AnimationCardBack from '../../../../public/icons/cards/CardAnimationBack.svg'
+
+import InnovationCardFront from '../../../../public/icons/cards/CardInnovationFront.svg'
+import InnovationCardBack from '../../../../public/icons/cards/CardInnovationBack.svg'
+
+import ReactCardFlip from 'react-card-flip'
 
 export const Branding = () => {
+  const [brandingCardIsFlipped, setBrandingCardIsFlipped] = useState(false)
+  const [animationCardIsFlipped, setAnimationCardFrontIsFlipped] =
+    useState(false)
+  const [innovationCardFrontIsFlipped, setInnovationCardFrontIsFlipped] =
+    useState(false)
+
+  const [hoverOnMouseCards, setHoverOnMouseCards] = useState(true)
+
+  function handleBrandingCardFlipped() {
+    setBrandingCardIsFlipped(!brandingCardIsFlipped)
+
+    setAnimationCardFrontIsFlipped(false)
+    setInnovationCardFrontIsFlipped(false)
+  }
+
+  function handleAnimationCardFlipped() {
+    setAnimationCardFrontIsFlipped(!animationCardIsFlipped)
+
+    setBrandingCardIsFlipped(false)
+    setInnovationCardFrontIsFlipped(false)
+  }
+
+  function handleInnovationCardFrontFlipped() {
+    setInnovationCardFrontIsFlipped(!innovationCardFrontIsFlipped)
+
+    setAnimationCardFrontIsFlipped(false)
+    setBrandingCardIsFlipped(false)
+  }
+
+  function handleHoverOnMouseCards() {
+    setHoverOnMouseCards(!hoverOnMouseCards)
+
+    console.log(hoverOnMouseCards)
+  }
+
   return (
     <section className={styles.branding}>
-      <div className={styles.container}>
-        <h2>
-          <span>Brand your</span> business for success
-        </h2>
+      <h2>
+        <span>Brand your </span>business for success
+      </h2>
 
-        <p>
-          Branding, animation or innovation, here we create what your company
-          needs
-        </p>
+      <p>
+        Branding, animation or innovation, here we create what your company
+        needs
+      </p>
 
-        <Image
-          src={Separator}
-          alt="Ícone de um separador"
-          className={styles.separator}
-        />
+      <div className={styles.separator}>
+        <Image src={Separator} alt="Ícone de um separador de conteúdo" />
+      </div>
 
-        <div className={styles.cards}>
-          <AnimationOnScroll animateIn="animate__backInLeft">
-            <Image src={CardOne} alt="Ícone de uma carta" />
-          </AnimationOnScroll>
+      <div
+        className={
+          hoverOnMouseCards ? styles.disabledCards : styles.activeCards
+        }
+        onMouseEnter={handleHoverOnMouseCards}
+        onMouseLeave={handleHoverOnMouseCards}
+      >
+        <div className={styles.card}>
+          <ReactCardFlip
+            isFlipped={brandingCardIsFlipped}
+            flipDirection="horizontal"
+          >
+            <button onClick={handleBrandingCardFlipped}>
+              <Image src={BrandingCardFront} alt="Imagem de uma carta" />
+            </button>
 
-          <AnimationOnScroll animateIn="animate__backInDown">
-            <Image src={CardTwo} alt="Ícone de uma carta" />
-          </AnimationOnScroll>
-
-          <AnimationOnScroll animateIn="animate__backInRight">
-            <Image src={CardThree} alt="Ícone de uma carta" />
-          </AnimationOnScroll>
+            <a>
+              <Image src={BrandingCardBack} alt="Imagem de uma carta" />
+            </a>
+          </ReactCardFlip>
         </div>
 
-        <ButtonBackground buttonText={'Contact now'} />
+        <div className={styles.card}>
+          <ReactCardFlip
+            isFlipped={animationCardIsFlipped}
+            flipDirection="horizontal"
+          >
+            <button onClick={handleAnimationCardFlipped}>
+              <Image src={AnimationCardFront} alt="Imagem de uma carta" />
+            </button>
+
+            <a>
+              <Image src={AnimationCardBack} alt="Imagem de uma carta" />
+            </a>
+          </ReactCardFlip>
+        </div>
+
+        <div className={styles.card}>
+          <ReactCardFlip
+            isFlipped={innovationCardFrontIsFlipped}
+            flipDirection="horizontal"
+          >
+            <button onClick={handleInnovationCardFrontFlipped}>
+              <Image src={InnovationCardFront} alt="Imagem de uma carta" />
+            </button>
+
+            <a>
+              <Image src={InnovationCardBack} alt="Imagem de uma carta" />
+            </a>
+          </ReactCardFlip>
+        </div>
       </div>
+
+      <ButtonBackground buttonText={'Contact Now'} />
     </section>
   )
 }

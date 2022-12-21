@@ -1,59 +1,138 @@
 .branding {
-  margin-top: 8.75rem;
-  .container {
-    width: 60%;
-    margin: 0 auto;
+  margin-top: 11.375rem;
 
+  p {
+    font-size: 1.125rem;
+
+    margin: 4rem auto 0 auto;
+
+    text-align: center;
+  }
+
+  .separator {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
 
-    p {
-      margin-top: 4.8rem;
+    margin-top: 2.3rem;
+  }
 
-      font-size: 1.125rem;
-    }
+  .activeCards {
+    margin-top: 12rem;
 
-    .separator {
-      margin: 2rem 0 4rem 0;
-    }
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.25rem;
 
-    .cards {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .card {
+      height: 100%;
+      transition: all 0.5s;
 
-      div {
+      &:nth-child(1) {
         position: relative;
-        top: 0;
-
-        transition: all 0.3s;
-
-        &:hover {
-          top: -60px;
-        }
-      }
-
-      div:nth-child(1) {
-        right: -80px;
-      }
-
-      div:nth-child(2) {
+        left: 0;
         top: -60px;
-        z-index: 1;
 
-        &:hover {
-          top: -80px;
-        }
+        transform: rotate(0);
       }
 
-      div:nth-child(3) {
-        right: 80px;
+      &:nth-child(2) {
+        position: relative;
+        top: -126px;
+        z-index: 2;
+      }
+
+      &:nth-child(3) {
+        position: relative;
+        right: 0;
+        top: -60px;
+
+        transform: rotate(0);
+      }
+
+      button img,
+      a img {
+        width: 294.93px;
+        height: 472.36px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button,
+      a {
+        margin: 0;
+        padding: 0;
+
+        border: none;
+
+        background: none;
       }
     }
+  }
 
-    a {
-      margin-top: 1.8rem;
+  .disabledCards {
+    margin-top: 12rem;
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.25rem;
+
+    .card {
+      transition: all 0.5s;
+
+      &:nth-child(1) {
+        position: relative;
+        left: 60px;
+        top: -60px;
+
+        transform: rotate(-14.52deg);
+      }
+
+      &:nth-child(2) {
+        position: relative;
+        top: -126px;
+        z-index: 2;
+      }
+
+      &:nth-child(3) {
+        position: relative;
+        right: 60px;
+        top: -60px;
+
+        transform: rotate(14.52deg);
+      }
+
+      button img,
+      a img {
+        width: 294.93px;
+        height: 472.36px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button,
+      a {
+        margin: 0;
+        padding: 0;
+
+        border: none;
+
+        background: none;
+      }
     }
+  }
+
+  a {
+    margin: 0 auto;
   }
 }
