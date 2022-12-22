@@ -2,11 +2,15 @@
   margin-top: 11.375rem;
 
   p {
-    font-size: 1.125rem;
+    font-size: 2rem;
 
     margin: 4rem auto 0 auto;
 
     text-align: center;
+
+    width: 550px;
+
+    font-style: italic;
   }
 
   .separator {
@@ -90,7 +94,7 @@
 
       &:nth-child(1) {
         position: relative;
-        left: 60px;
+        left: 80px;
         top: -60px;
 
         transform: rotate(-14.52deg);
@@ -104,7 +108,7 @@
 
       &:nth-child(3) {
         position: relative;
-        right: 60px;
+        right: 80px;
         top: -60px;
 
         transform: rotate(14.52deg);
@@ -132,7 +136,9 @@
     }
   }
 
-  a {
-    margin: 0 auto;
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

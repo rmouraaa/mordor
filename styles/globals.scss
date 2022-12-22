@@ -23,36 +23,6 @@
   list-style: none;
 }
 
-@font-face {
-  font-family: Black;
-  src: url(../public/fonts/biennale-black.otf);
-}
-
-@font-face {
-  font-family: Bold;
-  src: url(../public/fonts/biennale-bold.otf);
-}
-
-@font-face {
-  font-family: SemiBold;
-  src: url(../public/fonts/biennale-semibold.otf);
-}
-
-@font-face {
-  font-family: Regular;
-  src: url(../public/fonts/biennale-regular.otf);
-}
-
-@font-face {
-  font-family: Light;
-  src: url(../public/fonts/biennale-light.otf);
-}
-
-@font-face {
-  font-family: UltraLight;
-  src: url(../public/fonts/biennale-ultralight.otf);
-}
-
 // fonts
 
 @media (max-width: 1080px) {
@@ -75,7 +45,11 @@ body {
 
   color: var(--black-100);
   -webkit-font-smoothing: antialiased;
-  font-family: Regular;
+
+  font-family: 'Lora', serif;
+
+  transform: scale(1);
+  transform-origin: 0 0;
 }
 
 body,
@@ -85,11 +59,7 @@ select,
 button,
 p {
   font-size: 0.9rem;
-  font-family: Regular;
-}
-
-span {
-  font-family: Light;
+  font-family: 'Lora', serif;
 }
 
 h1,
@@ -98,18 +68,19 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Bold;
+  font-family: 'Lora', serif;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 3.6rem;
 
   text-align: center;
 
-  font-family: Light;
+  font-weight: 500;
+  font-style: italic;
 
   span {
-    font-family: Bold;
+    font-weight: 700;
   }
 }
 
@@ -121,4 +92,19 @@ a {
   transition: all 0.3s;
 
   padding: 0.5rem 0;
+}
+
+// barra de scroll
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--yellow-50);
+  border-radius: 1rem;
 }

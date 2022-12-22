@@ -2,12 +2,24 @@
   width: 1015px;
   margin: 11.876rem auto 0 auto;
 
+  h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+
   .text {
     margin-top: 6.1875rem;
 
-    display: flex;
-    flex-direction: column;
-    gap: 3.125rem;
+    p {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 500;
+
+      &:nth-child(2) {
+        margin-top: 2.75rem;
+      }
+    }
   }
 
   img {

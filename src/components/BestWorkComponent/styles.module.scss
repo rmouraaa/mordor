@@ -15,8 +15,9 @@
     margin-bottom: 2rem;
 
     h3 {
-      font-size: 1.5rem;
-      font-family: Light;
+      font-size: 3.5rem;
+      font-weight: 400;
+      font-style: italic;
 
       color: var(--yellow-100);
     }
@@ -24,9 +25,10 @@
     p {
       margin-top: 2.6rem;
 
-      font-family: Bold;
       color: var(--white-100);
-      font-size: 1rem;
+      font-size: 2rem;
+
+      font-weight: 700;
     }
 
     .link {
@@ -41,6 +43,8 @@
       a {
         display: inline-block;
         margin-top: 3rem;
+
+        font-size: 1.125rem;
 
         color: var(--yellow-100);
 

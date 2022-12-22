@@ -18,18 +18,26 @@
     margin: 9rem auto 8.1875rem auto;
 
     h2 {
-      font-size: 2rem;
+      font-size: 3rem;
       color: var(--yellow-100);
+      font-style: italic;
     }
 
-    span {
-      font-size: 1.125rem;
+    p {
+      color: var(--black-50);
+      font-size: 2rem;
+      font-weight: 700;
     }
   }
 
   p {
     text-align: center;
-    font-size: 1.125rem;
+    font-size: 2rem;
+    font-weight: 500;
+
+    &:nth-child(4) {
+      margin-top: 2.75rem;
+    }
   }
 
   .cite {
@@ -37,17 +45,24 @@
     align-items: flex-start;
     gap: 4.8125rem;
 
-    margin: 4.6rem 0 11.6875rem 0;
+    margin: 11.6875rem 0 4.6rem auto;
+
+    width: 88%;
 
     h3 {
-      font-size: 2rem;
+      font-size: 2.25rem;
       color: var(--yellow-100);
+      font-weight: 500;
+
+      font-style: italic;
     }
 
     span {
       display: block;
       margin-top: 2.375rem;
-      font-family: bold;
+
+      font-size: 1.185rem;
+      font-weight: 700;
     }
   }
 }

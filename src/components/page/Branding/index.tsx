@@ -17,6 +17,7 @@ import InnovationCardFront from '../../../../public/icons/cards/CardInnovationFr
 import InnovationCardBack from '../../../../public/icons/cards/CardInnovationBack.svg'
 
 import ReactCardFlip from 'react-card-flip'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 export const Branding = () => {
   const [brandingCardIsFlipped, setBrandingCardIsFlipped] = useState(false)
@@ -69,60 +70,64 @@ export const Branding = () => {
         <Image src={Separator} alt="Ícone de um separador de conteúdo" />
       </div>
 
-      <div
-        className={
-          hoverOnMouseCards ? styles.disabledCards : styles.activeCards
-        }
-        onMouseEnter={handleHoverOnMouseCards}
-        onMouseLeave={handleHoverOnMouseCards}
-      >
-        <div className={styles.card}>
-          <ReactCardFlip
-            isFlipped={brandingCardIsFlipped}
-            flipDirection="horizontal"
-          >
-            <button onClick={handleBrandingCardFlipped}>
-              <Image src={BrandingCardFront} alt="Imagem de uma carta" />
-            </button>
+      <AnimationOnScroll animateIn="animate__fadeInUp">
+        <div
+          className={
+            hoverOnMouseCards ? styles.disabledCards : styles.activeCards
+          }
+          onMouseEnter={handleHoverOnMouseCards}
+          onMouseLeave={handleHoverOnMouseCards}
+        >
+          <div className={styles.card}>
+            <ReactCardFlip
+              isFlipped={brandingCardIsFlipped}
+              flipDirection="horizontal"
+            >
+              <button onClick={handleBrandingCardFlipped}>
+                <Image src={BrandingCardFront} alt="Imagem de uma carta" />
+              </button>
 
-            <a>
-              <Image src={BrandingCardBack} alt="Imagem de uma carta" />
-            </a>
-          </ReactCardFlip>
+              <a>
+                <Image src={BrandingCardBack} alt="Imagem de uma carta" />
+              </a>
+            </ReactCardFlip>
+          </div>
+
+          <div className={styles.card}>
+            <ReactCardFlip
+              isFlipped={animationCardIsFlipped}
+              flipDirection="horizontal"
+            >
+              <button onClick={handleAnimationCardFlipped}>
+                <Image src={AnimationCardFront} alt="Imagem de uma carta" />
+              </button>
+
+              <a>
+                <Image src={AnimationCardBack} alt="Imagem de uma carta" />
+              </a>
+            </ReactCardFlip>
+          </div>
+
+          <div className={styles.card}>
+            <ReactCardFlip
+              isFlipped={innovationCardFrontIsFlipped}
+              flipDirection="horizontal"
+            >
+              <button onClick={handleInnovationCardFrontFlipped}>
+                <Image src={InnovationCardFront} alt="Imagem de uma carta" />
+              </button>
+
+              <a>
+                <Image src={InnovationCardBack} alt="Imagem de uma carta" />
+              </a>
+            </ReactCardFlip>
+          </div>
         </div>
+      </AnimationOnScroll>
 
-        <div className={styles.card}>
-          <ReactCardFlip
-            isFlipped={animationCardIsFlipped}
-            flipDirection="horizontal"
-          >
-            <button onClick={handleAnimationCardFlipped}>
-              <Image src={AnimationCardFront} alt="Imagem de uma carta" />
-            </button>
-
-            <a>
-              <Image src={AnimationCardBack} alt="Imagem de uma carta" />
-            </a>
-          </ReactCardFlip>
-        </div>
-
-        <div className={styles.card}>
-          <ReactCardFlip
-            isFlipped={innovationCardFrontIsFlipped}
-            flipDirection="horizontal"
-          >
-            <button onClick={handleInnovationCardFrontFlipped}>
-              <Image src={InnovationCardFront} alt="Imagem de uma carta" />
-            </button>
-
-            <a>
-              <Image src={InnovationCardBack} alt="Imagem de uma carta" />
-            </a>
-          </ReactCardFlip>
-        </div>
+      <div className={styles.button}>
+        <ButtonBackground buttonText={'Contact Now'} />
       </div>
-
-      <ButtonBackground buttonText={'Contact Now'} />
     </section>
   )
 }
