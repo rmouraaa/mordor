@@ -18,32 +18,47 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          {/* <meta name="title" content="MovePay | O banco do imigrante" />
+          <meta
+            name="title"
+            content="Mordor | At Mordor we create iconic brands for unique customers"
+          />
           <meta
             name="description"
-            content="Abra uma conta em um banco internacional antes mesmo de sair do seu país. "
+            content="Mordor is a branding and brand experience studio. What does that
+            mean? Here we create not only your brand, but the entire visual and
+            textual universe so that our customer has the best possible
+            experience with your company through your brand."
           />
 
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://movepay.eu/" />
-          <meta property="og:title" content="MovePay | O banco do imigrante" />
+          <meta property="og:url" content="https://mordor.com" />
+          <meta
+            property="og:title"
+            content="Mordor | At Mordor we create iconic brands for unique customers"
+          />
           <meta
             property="og:description"
-            content="Abra uma conta em um banco internacional antes mesmo de sair do seu país. "
+            content="Mordor is a branding and brand experience studio. What does that
+            mean? Here we create not only your brand, but the entire visual and
+            textual universe so that our customer has the best possible
+            experience with your company through your brand."
           />
-          <meta property="og:image" content="/ogimage.png" />
+          {/* <meta property="og:image" content="/ogimage.png" /> */}
 
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://movepay.eu/" />
+          <meta property="twitter:url" content="https://movepay.com" />
           <meta
             property="twitter:title"
-            content="MovePay | O banco do imigrante"
+            content="Mordor | At Mordor we create iconic brands for unique customers"
           />
           <meta
             property="twitter:description"
-            content="Abra uma conta em um banco internacional antes mesmo de sair do seu país. "
+            content="Mordor is a branding and brand experience studio. What does that
+            mean? Here we create not only your brand, but the entire visual and
+            textual universe so that our customer has the best possible
+            experience with your company through your brand."
           />
-          <meta property="twitter:image" content="/ogimage.png" /> */}
+          {/* <meta property="twitter:image" content="/ogimage.png" /> */}
         </Head>
         <body>
           <Main />
