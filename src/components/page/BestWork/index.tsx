@@ -20,20 +20,20 @@ export const BestWork = () => {
           <BestWorkComponent
             title={'A new development in Belo Horizonte'}
             image={bestWordImageOne}
-            link={'#'}
+            link={'/project'}
           />
 
           <BestWorkComponent
             title={'A new development in Belo Horizonte'}
             image={bestWordImageTwo}
-            link={'#'}
+            link={'/project'}
             variant={'left'}
           />
 
           <BestWorkComponent
             title={'A new development in Belo Horizonte'}
             image={bestWordImageThree}
-            link={'#'}
+            link={'/project'}
           />
         </div>
       </div>

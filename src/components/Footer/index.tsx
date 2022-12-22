@@ -4,9 +4,15 @@ import styles from './styles.module.scss'
 
 import Decoration from '../../../public/icons/separatorCopyright.svg'
 
-export const Footer = () => {
+interface FooterProps {
+  withBackground?: boolean
+}
+
+export const Footer = ({ withBackground = false }: FooterProps) => {
   return (
-    <footer className={styles.footer}>
+    <footer
+      className={withBackground ? styles.footerBackground : styles.footer}
+    >
       <div className={styles.container}>
         <div className={styles.titleBox}>
           <h2>

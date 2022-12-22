@@ -1,0 +1,47 @@
+.project {
+  width: 100%;
+  height: 100%;
+
+  min-height: 100vh;
+
+  background: var(--white-200);
+
+  .introduction {
+    .title {
+      margin-top: 0.8rem;
+
+      position: relative;
+      z-index: 2;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .banner {
+      margin-top: -150px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .projectLogo img {
+    width: 100%;
+  }
+
+  .projectPattern {
+    margin-top: 10rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  .projectImages {
+    margin-top: 11.4375rem;
+    img {
+      width: 100%;
+    }
+  }
+}
