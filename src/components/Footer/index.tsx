@@ -13,12 +13,13 @@ export const Footer = ({ withBackground = false }: FooterProps) => {
   return (
     <footer
       className={withBackground ? styles.footerBackground : styles.footer}
+      id="contact"
     >
       <AnimationOnScroll animateIn="animate__fadeInUp">
         <div className={styles.container}>
           <div className={styles.titleBox}>
             <h2>
-              <span>Let`s talk about</span> your new brand{' '}
+              <span>Let`s talk about</span> your new brand
             </h2>
           </div>
 

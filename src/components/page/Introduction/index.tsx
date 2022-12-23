@@ -7,7 +7,7 @@ import { ButtonBackground } from '../../ButtonBackground'
 
 export const Introduction = () => {
   return (
-    <section className={styles.introduction}>
+    <section className={styles.introduction} id="welcome">
       <div className={styles.container}>
         <Image
           src={Logo}

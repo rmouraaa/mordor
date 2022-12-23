@@ -1,4 +1,5 @@
 import React from 'react'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 import YouTube from 'react-youtube'
 import styles from './styles.module.scss'
 export const YoutubeSection = () => {
@@ -15,10 +16,12 @@ export const YoutubeSection = () => {
   }
 
   return (
-    <section className={styles.youtubeSection}>
-      <div className={styles.youtubePlayer}>
-        <YouTube videoId="l2WcxMAaiRA" opts={opts} onReady={onReadyVideo} />
-      </div>
-    </section>
+    <AnimationOnScroll animateIn="animate__fadeInUp">
+      <section className={styles.youtubeSection}>
+        <div className={styles.youtubePlayer}>
+          <YouTube videoId="l2WcxMAaiRA" opts={opts} onReady={onReadyVideo} />
+        </div>
+      </section>
+    </AnimationOnScroll>
   )
 }

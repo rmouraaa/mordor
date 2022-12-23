@@ -10,7 +10,7 @@ import bestWordImageThree from '../../../../public/images/coatImage.webp'
 
 export const BestWork = () => {
   return (
-    <section className={styles.bestWork}>
+    <section className={styles.bestWork} id="ourCase">
       <div className={styles.container}>
         <h2>
           Some of our <span>best work</span>
@@ -20,20 +20,20 @@ export const BestWork = () => {
           <BestWorkComponent
             title={'A new development in Belo Horizonte'}
             image={bestWordImageOne}
-            link={'/project'}
+            link={'/project/1'}
           />
 
           <BestWorkComponent
             title={'A new development in Belo Horizonte'}
             image={bestWordImageTwo}
-            link={'/project'}
+            link={'/project/2'}
             variant={'left'}
           />
 
           <BestWorkComponent
             title={'A new development in Belo Horizonte'}
             image={bestWordImageThree}
-            link={'/project'}
+            link={'/project/3'}
           />
         </div>
       </div>

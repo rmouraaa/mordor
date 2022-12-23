@@ -18,6 +18,7 @@ import InnovationCardBack from '../../../../public/icons/cards/CardInnovationBac
 
 import ReactCardFlip from 'react-card-flip'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
+import { Link } from 'react-scroll'
 
 export const Branding = () => {
   const [brandingCardIsFlipped, setBrandingCardIsFlipped] = useState(false)
@@ -56,7 +57,7 @@ export const Branding = () => {
   }
 
   return (
-    <section className={styles.branding}>
+    <section className={styles.branding} id="service">
       <h2>
         <span>Brand your </span>business for success
       </h2>
@@ -87,9 +88,16 @@ export const Branding = () => {
                 <Image src={BrandingCardFront} alt="Imagem de uma carta" />
               </button>
 
-              <a>
+              <Link
+                offset={0}
+                to="ourCase"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                href="#ourCase"
+              >
                 <Image src={BrandingCardBack} alt="Imagem de uma carta" />
-              </a>
+              </Link>
             </ReactCardFlip>
           </div>
 
@@ -102,9 +110,16 @@ export const Branding = () => {
                 <Image src={AnimationCardFront} alt="Imagem de uma carta" />
               </button>
 
-              <a>
+              <Link
+                offset={0}
+                to="ourCase"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                href="#ourCase"
+              >
                 <Image src={AnimationCardBack} alt="Imagem de uma carta" />
-              </a>
+              </Link>
             </ReactCardFlip>
           </div>
 
@@ -117,9 +132,16 @@ export const Branding = () => {
                 <Image src={InnovationCardFront} alt="Imagem de uma carta" />
               </button>
 
-              <a>
+              <Link
+                offset={0}
+                to="ourCase"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                href="#ourCase"
+              >
                 <Image src={InnovationCardBack} alt="Imagem de uma carta" />
-              </a>
+              </Link>
             </ReactCardFlip>
           </div>
         </div>

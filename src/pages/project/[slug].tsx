@@ -20,6 +20,7 @@ import { AboutProjectText } from '../../components/page/Project/page/AboutProjec
 import { YoutubeSection } from '../../components/page/Project/page/YoutubeSection'
 import { TypographySection } from '../../components/page/Project/page/TypographySection'
 import { ApplicationMaterials } from '../../components/page/Project/page/ApplicationMaterials'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const Project = () => {
   return (
@@ -28,7 +29,7 @@ const Project = () => {
         <title>Mordor | Project</title>
       </Head>
 
-      <Header />
+      <Header isProjectPage={true} />
 
       <section className={styles.introduction}>
         <div className={styles.title}>
@@ -52,22 +53,37 @@ const Project = () => {
 
       <YoutubeSection />
 
-      <div className={styles.projectLogo}>
-        <Image src={LogoProject} alt="Logo da empresa" />
-      </div>
+      <AnimationOnScroll animateIn="animate__fadeInLeft">
+        <div className={styles.projectLogo}>
+          <Image src={LogoProject} alt="Logo da empresa" />
+        </div>
+      </AnimationOnScroll>
 
-      <TypographySection />
+      <AnimationOnScroll animateIn="animate__fadeInUp">
+        <TypographySection />
+      </AnimationOnScroll>
 
-      <div className={styles.projectPattern}>
-        <Image src={PatternProject} alt="Pattern da empresa" />
-      </div>
+      <AnimationOnScroll animateIn="animate__fadeInRight">
+        <div className={styles.projectPattern}>
+          <Image src={PatternProject} alt="Pattern da empresa" />
+        </div>
+      </AnimationOnScroll>
 
-      <ApplicationMaterials />
+      <AnimationOnScroll animateIn="animate__fadeInUp">
+        <ApplicationMaterials />
+      </AnimationOnScroll>
 
       <section className={styles.projectImages}>
-        <Image src={CardProject} alt="Cartão da empresa" />
-        <Image src={BrindeProject} alt="Brinde da empresa" />
-        <Image src={BookProject} alt="Book da empresa" />
+        <AnimationOnScroll animateIn="animate__fadeInLeft">
+          <Image src={CardProject} alt="Cartão da empresa" />
+        </AnimationOnScroll>
+
+        <AnimationOnScroll animateIn="animate__fadeInRight">
+          <Image src={BrindeProject} alt="Brinde da empresa" />
+        </AnimationOnScroll>
+        <AnimationOnScroll animateIn="animate__fadeInLeft">
+          <Image src={BookProject} alt="Book da empresa" />
+        </AnimationOnScroll>
       </section>
 
       <Footer withBackground={true} />
