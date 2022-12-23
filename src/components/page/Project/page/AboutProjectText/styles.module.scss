@@ -72,3 +72,38 @@
     font-weight: 500;
   }
 }
+
+// responsive
+@media (max-width: 1000px) {
+  .aboutProjectText .decoration {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .aboutProjectText {
+    width: 90%;
+    .title {
+      flex-direction: column;
+      align-items: flex-start;
+
+      width: 90%;
+    }
+
+    .text {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .aboutProjectText {
+    .cite {
+      gap: 0;
+      img {
+        display: none;
+        margin: 11.6875rem auto 4.6rem auto;
+      }
+    }
+  }
+}
