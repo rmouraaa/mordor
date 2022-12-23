@@ -38,3 +38,19 @@
     }
   }
 }
+
+// responsive
+
+@media (max-width: 800px) {
+  .introduction {
+    margin-top: 2rem;
+
+    .container {
+      width: 90%;
+
+      .content {
+        margin-top: 4rem;
+      }
+    }
+  }
+}

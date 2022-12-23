@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ButtonBackground } from '../ButtonBackground'
 import styles from './styles.module.scss'
 
@@ -9,11 +9,27 @@ interface HeaderProps {
 }
 
 export const Header = ({ isProjectPage = false }: HeaderProps) => {
+  const [hiddenMenu, setHiddenMenu] = useState(false)
+
+  function handleMenuButton() {
+    setHiddenMenu(!hiddenMenu)
+  }
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <nav>
-          <ul>
+          <button
+            className={styles.menuButton}
+            onClick={handleMenuButton}
+            aria-label="Abrir menu"
+          ></button>
+          <ul className={hiddenMenu ? styles.active : styles.disabled}>
+            <button
+              className={styles.closeMenuButton}
+              onClick={handleMenuButton}
+              aria-label="Fechar menu"
+            ></button>
             <li>
               {isProjectPage ? (
                 <a href="/">Welcome to Mordor</a>
@@ -79,7 +95,6 @@ export const Header = ({ isProjectPage = false }: HeaderProps) => {
             </li>
           </ul>
         </nav>
-
         <ButtonBackground buttonText={'Contact now'} />
       </div>
     </header>
