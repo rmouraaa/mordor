@@ -41,6 +41,7 @@ export const Header = ({ isProjectPage = false }: HeaderProps) => {
                   smooth={true}
                   duration={1000}
                   href="#welcome"
+                  onClick={handleMenuButton}
                 >
                   Welcome to Mordor
                 </Link>
@@ -58,6 +59,7 @@ export const Header = ({ isProjectPage = false }: HeaderProps) => {
                   smooth={true}
                   duration={1000}
                   href="#service"
+                  onClick={handleMenuButton}
                 >
                   Service
                 </Link>
@@ -75,6 +77,7 @@ export const Header = ({ isProjectPage = false }: HeaderProps) => {
                   smooth={true}
                   duration={1000}
                   href="#ourCase"
+                  onClick={handleMenuButton}
                 >
                   Our cases
                 </Link>
@@ -89,6 +92,7 @@ export const Header = ({ isProjectPage = false }: HeaderProps) => {
                 smooth={true}
                 duration={1000}
                 href="#contact"
+                onClick={handleMenuButton}
               >
                 Contact
               </Link>
