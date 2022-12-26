@@ -99,7 +99,7 @@ export const Header = ({ isProjectPage = false }: HeaderProps) => {
             </li>
           </ul>
         </nav>
-        <ButtonBackground buttonText={'Contact now'} />
+        <ButtonBackground buttonText={'Contact Now'} />
       </div>
     </header>
   )

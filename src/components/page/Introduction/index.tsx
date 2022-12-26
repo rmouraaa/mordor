@@ -29,7 +29,7 @@ export const Introduction = () => {
 
           <p>At Mordor we create iconic brands for unique customers</p>
 
-          <ButtonBackground buttonText={'Contact now'} />
+          <ButtonBackground buttonText={'Contact Now'} />
         </div>
       </div>
     </section>

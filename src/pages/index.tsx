@@ -17,11 +17,13 @@ export default function Home() {
       <Header />
 
       <main>
-        <Introduction />
+        <div className="contentMain">
+          <Introduction />
 
-        <Branding />
+          <Branding />
 
-        <BestWork />
+          <BestWork />
+        </div>
       </main>
 
       <Footer />
