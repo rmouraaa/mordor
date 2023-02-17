@@ -2,7 +2,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
-import { Header } from '../../components/Header'
+import { Header } from '../components/Header'
 
 import styles from './styles.module.scss'
 
