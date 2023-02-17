@@ -17,7 +17,7 @@ export const Introduction = () => {
 
         <div className={styles.content}>
           <h2>
-            Welcome to <span>Mordor</span>
+            Welcome to* <span>Mordor</span>
           </h2>
 
           <p>
