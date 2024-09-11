@@ -1,10 +1,9 @@
-
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import { Header } from '../components/Header'
 
-import styles from './styles.module.scss'
+import styles from './project/styles.module.scss'
 
 import ProjectPageTitle from '../../public/project/icons/projectPageTitle.svg'
 import ProjectBanner from '../../public/project/images/projectbanner.webp'

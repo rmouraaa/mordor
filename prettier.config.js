@@ -3,5 +3,5 @@ module.exports = {
   singleQuote: true,
   arrowParens: 'avoid',
   trailingComma: 'none',
-  endOfLine: 'auto'
+  endOfLine: 'lf' // Certifique-se de que está definido como 'lf'
 }
